@@ -1,0 +1,7 @@
+{
+  "name": "agrotec_novo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
