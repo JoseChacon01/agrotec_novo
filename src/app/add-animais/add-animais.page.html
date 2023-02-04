@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="success">
     <ion-buttons slot="start" (click)="Animais()">
       <ion-icon name="arrow-back"> </ion-icon>
     </ion-buttons>
@@ -9,31 +9,80 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-item>
-    <ion-label position="floating">
-      Nome
-    </ion-label>
-    <ion-input [(ngModel)]="nome">
 
-    </ion-input>
+  <ion-item fill="solid">
+    <ion-label position="floating">Nome:</ion-label>
+    <ion-input [(ngModel)]="nome" placeholder="Nome do Animal"></ion-input>
   </ion-item>
-
+  
+  <ion-item fill="solid">
+    <ion-label position="floating">Nº Brinco:</ion-label>
+    <ion-input [(ngModel)]="numero_brinco" placeholder="Informe o Nº do Brinco"></ion-input>
+  </ion-item> 
+  
+  <ion-item fill="solid">
+    <ion-label position="floating">Raça:</ion-label>
+    <ion-input [(ngModel)]="raca" placeholder="Raça do Animal"></ion-input>
+  </ion-item>
+  
+  <ion-item fill="solid">
+    <ion-label position="floating">Nascimento:</ion-label>
+    <ion-input [(ngModel)]="data_nascimento" type="date" placeholder="Data de Nascimento"></ion-input>
+  </ion-item>
+  
+  <ion-item fill="solid">
+    <ion-label position="floating">Local:</ion-label>
+    <ion-input [(ngModel)]="local_de_nascimento" placeholder="Local do Nascimento"></ion-input>
+  </ion-item>
+  
+  <ion-item fill="solid">
+    <ion-label position="floating">Quilos:</ion-label>
+    <ion-input [(ngModel)]="quilos_do_nascimento" placeholder="Quilos no Nascimento"></ion-input>
+  </ion-item>
+  
+  <ion-item fill="solid">
+    <ion-label position="floating">Anomalia:</ion-label>
+    <ion-input [(ngModel)]="anomalia" placeholder="Anomalia"></ion-input>
+  </ion-item>
+  <br/>
   <ion-item>
-    <ion-label>Sexo</ion-label>
+    <ion-label>Sexo:</ion-label>
     <ion-select placeholder="Selecione" [(ngModel)]="sexo">
       <ion-select-option value="macho">Macho</ion-select-option>
-      <ion-select-option value="femea">Femea</ion-select-option>
+      <ion-select-option value="femea">Fêmea</ion-select-option>
+    </ion-select>
+  </ion-item>
+<br/>
+  <ion-item>
+    <ion-label>Espécie</ion-label>
+    <ion-select placeholder="Selecione" [(ngModel)]="especie">
+      <ion-select-option value="ouvino">Ouvino</ion-select-option>
+      <ion-select-option value="caprino">Caprino</ion-select-option>
+      <ion-select-option value="suino">Suino</ion-select-option>
+      <ion-select-option value="bovino">Bovino</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br/>
+  <ion-item>
+    <ion-label>Exploração</ion-label>
+    <ion-select placeholder="Selecione" [(ngModel)]="tipo_exploracao">
+      <ion-select-option value="carne">Carne</ion-select-option>
+      <ion-select-option value="leite">Leite</ion-select-option>
+      <ion-select-option value="matriz">Matriz</ion-select-option>
+      <ion-select-option value="reprodutor">Reprodutor</ion-select-option>
     </ion-select>
   </ion-item>
 
+  <br/>
   <ion-item>
-    <ion-label position="floating">
-      raça
-    </ion-label>
-    <ion-input [(ngModel)]="raca">
-
-    </ion-input>
+    <ion-label>Categoria</ion-label>
+    <ion-select placeholder="Selecione" [(ngModel)]="categoria">
+      <ion-select-option value="cria">Cria</ion-select-option>
+      <ion-select-option value="recria">Recria</ion-select-option>
+      <ion-select-option value="engorda">Engorda</ion-select-option>
+    </ion-select>
   </ion-item>
+
 
 
 

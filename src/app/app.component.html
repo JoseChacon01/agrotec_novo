@@ -3,8 +3,8 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Agro Tec</ion-list-header>
-          <ion-note>@agro_tec_of</ion-note>
+          <ion-list-header>AgroTec+</ion-list-header> 
+          <ion-note>@agrotec_of</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
@@ -12,8 +12,31 @@
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+          <ion-select interface="popover" placeholder="Configurações">
+            <ion-select-option value="carne">Meus dados</ion-select-option>
+            <ion-select-option value="leite">Alterar dados</ion-select-option>
+            <ion-select-option value="semen">Sair</ion-select-option>
+          </ion-select>
         </ion-list>
 
+        <!-- =================PERMISSOES DO ADM=============================
+
+        <ion-list id="labels-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPagesPermissions; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-select interface="popover" placeholder="Configurações">
+            <ion-select-option value="carne">Meus dados</ion-select-option>
+            <ion-select-option value="leite">Alterar dados</ion-select-option>
+            <ion-select-option value="semen">Sair</ion-select-option>
+          </ion-select>
+        </ion-list>
+      -->
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
