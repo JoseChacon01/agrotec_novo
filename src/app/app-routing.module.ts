@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'mostrar-animais/:idanimal/:nome/:data_nascimento/:sexo/:raca/:especie/:tipo_exploracao/:local_de_nascimento/:categoria/:anomalia/:quilos_do_nascimento/:numero_brinco',
     loadChildren: () => import('./mostrar-animais/mostrar-animais.module').then( m => m.MostrarAnimaisPageModule)
   },
+  {
+    path: 'add-animais/:idanimal/:nome/:data_nascimento/:sexo/:raca/:especie/:tipo_exploracao/:local_de_nascimento/:categoria/:anomalia/:quilos_do_nascimento/:numero_brinco',
+    loadChildren: () => import('./add-animais/add-animais.module').then( m => m.AddAnimaisPageModule)
+  },
   
 ];
 

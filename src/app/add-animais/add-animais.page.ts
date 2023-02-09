@@ -24,6 +24,9 @@ export class AddAnimaisPage implements OnInit {
   numero_brinco: string = "";
   idanimal: string = "";
 
+  antigo: string = "";
+  antigo2: string = "";
+
   constructor(
     private router:Router, 
     private provider: Api,
@@ -36,6 +39,22 @@ export class AddAnimaisPage implements OnInit {
     console.log('teste');
    // this.mensagemsucesso();
     this.actRouter.params.subscribe((data:any)=>{
+
+      this.idanimal = data.idanimal;
+      this.nome = data.nome;
+      this.data_nascimento = data.data_nascimento;
+      this.sexo = data.sexo;
+      this.raca = data.raca;
+      this.especie = data.especie;
+      this.tipo_exploracao = data.tipo_exploracao;
+      this.local_de_nascimento = data.local_de_nascimento;
+      this.categoria = data.categoria;
+      this.anomalia = data.anomalia;
+      this.quilos_do_nascimento = data.quilos_do_nascimento;
+      this.numero_brinco = data.numero_brinco;
+
+      this.antigo = data.nome;
+      this.antigo2 = data.numero_brinco;
 
     });
   }
@@ -71,7 +90,10 @@ export class AddAnimaisPage implements OnInit {
         categoria: this.categoria,
         anomalia: this.anomalia,
         quilos_do_nascimento: this.quilos_do_nascimento,
-        numero_brinco: this.numero_brinco
+        numero_brinco: this.numero_brinco,
+        idanimal: this.idanimal,
+        antigo: this.antigo,
+        antigo2: this.antigo2,
       }
       this.provider.dadosApi(dados, '/animais/inserir.php').subscribe(
         data =>{
@@ -90,9 +112,7 @@ export class AddAnimaisPage implements OnInit {
 
   }
 
-  editar(){
-    
-  }
+
 
   limparCampos(){
     this.nome = "";
