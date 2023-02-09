@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start" (click)="Animais()">
+      <ion-icon name="arrow-back"> </ion-icon>
+    </ion-buttons>
+    <ion-title>Dados do Animal</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-card class="cinza-claro">
+    <ion-card-header>
+      
+      <ion-card-title>
+        {{nome}}  Nº {{numero_brinco}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Especie: {{especie}} <br>
+      Raça: {{raca}} <br>
+      Sexo: {{sexo}} <br>
+      Tipo de Exploração: {{tipo_exploracao}} <br>
+      Categoria: {{categoria}} <br>
+      Anomalia: {{anomalia}} <br><br>
+  
+      Pai:  <br>
+
+      Mãe:  <br>
+
+      Responsavel Pelo Parto:  <br>
+
+      Data de Nascimento: {{data_nascimento}} <br>
+
+      Local de Nascimento: {{local_de_nascimento}} <br>
+
+      Quilos do Nascimento: {{quilos_do_nascimento}} <br>
+
+
+      
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+  

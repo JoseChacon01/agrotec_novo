@@ -18,7 +18,16 @@ const routes: Routes = [
   {
     path: 'animais',
     loadChildren: () => import('./animais/animais.module').then( m => m.AnimaisPageModule)
-  }
+  },
+  {
+    path: 'mostrar-animais',
+    loadChildren: () => import('./mostrar-animais/mostrar-animais.module').then( m => m.MostrarAnimaisPageModule)
+  },
+  {
+    path: 'mostrar-animais/:idanimal/:nome/:data_nascimento/:sexo/:raca/:especie/:tipo_exploracao/:local_de_nascimento/:categoria/:anomalia/:quilos_do_nascimento/:numero_brinco',
+    loadChildren: () => import('./mostrar-animais/mostrar-animais.module').then( m => m.MostrarAnimaisPageModule)
+  },
+  
 ];
 
 @NgModule({

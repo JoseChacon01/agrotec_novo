@@ -62,6 +62,26 @@ export class AnimaisPage implements OnInit {
     
   }
 
+
+
+  editar(idanimal:any, nome:any, data_nascimento:any, sexo:any, raca:any, especie:any, tipo_exploracao:any, local_de_nascimento:any, categoria:any, anomalia:any, quilos_do_nascimento:any, numero_brinco:any){
+
+  }
+  
+  excluir(idanimal:any){
+  
+  }
+
+  mostrar(idanimal:any, nome:any, data_nascimento:any, sexo:any, raca:any, especie:any, tipo_exploracao:any, local_de_nascimento:any, categoria:any, anomalia:any, quilos_do_nascimento:any, numero_brinco:any){
+    this.router.navigate(['mostrar-animais/' + idanimal + '/' + nome + '/' + data_nascimento + '/' + sexo + '/' + raca + '/' + especie + '/' + tipo_exploracao + '/' + local_de_nascimento + '/' + categoria + '/' + anomalia + '/' + quilos_do_nascimento + '/' + numero_brinco + '/'])
+  
+  }
+  
+
+
+
+
+
    //atualizar o list view
 
  doRefresh(event:any) {
@@ -88,16 +108,5 @@ loadData(event:any) {
 
 }
 
-editar(){
-
-}
-
-mostrar(){
-
-}
-
-excluir(){
-
-}
 
 }
