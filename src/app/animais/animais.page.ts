@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Api } from 'src/services/api';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-animais',
@@ -19,6 +20,8 @@ export class AnimaisPage implements OnInit {
     private router:Router,
     private provider: Api,
     private actRouter: ActivatedRoute,
+    private toastController: ToastController
+
     ) { }
 
   ngOnInit() {
@@ -33,6 +36,17 @@ export class AnimaisPage implements OnInit {
     this.start = 0;
     this.carregar(); 
   }
+
+
+  async mensagem (mensagem: string, cor:any) {
+    const toast = await this.toastController.create({
+      message: mensagem,
+      duration: 1500,
+      color: cor
+    });
+    await toast.present();
+  }
+
 
   carregar(){
     return new Promise(resolve => {
@@ -70,6 +84,24 @@ export class AnimaisPage implements OnInit {
   }
   
   excluir(idanimal:any){
+    return new Promise(resolve => {
+      let dados = {
+        idanimal: idanimal,
+
+      }
+      this.provider.dadosApi(dados, '/animais/excluir.php').subscribe(
+        data =>{
+          
+          if(data['ok']== true){
+            this.carregar();
+            this.mensagem(data['mensagem'], 'success');
+         }else{
+          this.mensagem(data['mensagem'], 'danger');
+         }
+
+        }
+      )
+    });
   
   }
 
