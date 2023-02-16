@@ -20,6 +20,10 @@ export class MostrarAnimaisPage implements OnInit {
   categoria: string = "";
   anomalia: string = "";
   quilos_do_nascimento: string = "";
+  fk_idanimal_pai: string = "";
+  fk_idanimal_mae: string = "";
+  fk_funcionario_resp_parto: string = "";
+
   numero_brinco: string = "";
   idanimal: string = "";
 
@@ -43,6 +47,9 @@ export class MostrarAnimaisPage implements OnInit {
       this.categoria = data.categoria;
       this.anomalia = data.anomalia;
       this.quilos_do_nascimento = data.quilos_do_nascimento;
+      this.fk_idanimal_pai = data.fk_idanimal_pai;
+      this.fk_idanimal_mae = data.fk_idanimal_mae;
+      this.fk_funcionario_resp_parto = data.fk_funcionario_resp_parto;
       this.numero_brinco = data.numero_brinco;
 
     });

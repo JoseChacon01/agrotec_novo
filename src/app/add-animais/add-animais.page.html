@@ -29,6 +29,11 @@
     <ion-label position="floating">Nascimento:</ion-label>
     <ion-input [(ngModel)]="data_nascimento" type="date" placeholder="Data de Nascimento"></ion-input>
   </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">Responsável:</ion-label>
+    <ion-input [(ngModel)]="fk_funcionario_resp_parto" placeholder="Responsável Pelo Parto"></ion-input>
+  </ion-item>
   
   <ion-item fill="solid">
     <ion-label position="floating">Local:</ion-label>
@@ -43,6 +48,29 @@
   <ion-item fill="solid">
     <ion-label position="floating">Anomalia:</ion-label>
     <ion-input [(ngModel)]="anomalia" placeholder="Descreva a Anomalia"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">Pai:</ion-label>
+    <ion-input [(ngModel)]="fk_idanimal_pai" placeholder="Informe o Número do Pai"></ion-input>   
+
+   
+    <ion-button color="success" fill="solid" (click)="PesquisarAnimais()">
+      Pesquisar
+      <ion-icon slot="end" name="help-circle"></ion-icon>
+    </ion-button>
+    
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">Mãe:</ion-label>
+    <ion-input [(ngModel)]="fk_idanimal_mae" placeholder="Informe o Número da Mãe"></ion-input>
+
+    <ion-button color="success" fill="solid" (click)="PesquisarAnimais()">
+      Pesquisar
+      <ion-icon slot="end" name="help-circle"></ion-icon>
+    </ion-button>
+    
   </ion-item>
   <br/>
   <ion-item>

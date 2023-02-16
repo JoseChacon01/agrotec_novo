@@ -24,12 +24,16 @@ const routes: Routes = [
     loadChildren: () => import('./mostrar-animais/mostrar-animais.module').then( m => m.MostrarAnimaisPageModule)
   },
   {
-    path: 'mostrar-animais/:idanimal/:nome/:data_nascimento/:sexo/:raca/:especie/:tipo_exploracao/:local_de_nascimento/:categoria/:anomalia/:quilos_do_nascimento/:numero_brinco',
+    path: 'mostrar-animais/:idanimal/:nome/:data_nascimento/:sexo/:raca/:especie/:tipo_exploracao/:local_de_nascimento/:categoria/:anomalia/:quilos_do_nascimento/:fk_idanimal_pai/:fk_idanimal_mae/:fk_funcionario_resp_parto/:numero_brinco',
     loadChildren: () => import('./mostrar-animais/mostrar-animais.module').then( m => m.MostrarAnimaisPageModule)
   },
   {
-    path: 'add-animais/:idanimal/:nome/:data_nascimento/:sexo/:raca/:especie/:tipo_exploracao/:local_de_nascimento/:categoria/:anomalia/:quilos_do_nascimento/:numero_brinco',
+    path: 'add-animais/:idanimal/:nome/:data_nascimento/:sexo/:raca/:especie/:tipo_exploracao/:local_de_nascimento/:categoria/:anomalia/:quilos_do_nascimento/:fk_idanimal_pai/:fk_idanimal_mae/:fk_funcionario_resp_parto/:numero_brinco',
     loadChildren: () => import('./add-animais/add-animais.module').then( m => m.AddAnimaisPageModule)
+  },
+  {
+    path: 'pesquisar-animais',
+    loadChildren: () => import('./pesquisar-animais/pesquisar-animais.module').then( m => m.PesquisarAnimaisPageModule)
   },
   
 ];

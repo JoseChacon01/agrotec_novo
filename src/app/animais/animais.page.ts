@@ -78,8 +78,8 @@ export class AnimaisPage implements OnInit {
 
 
 
-  editar(idanimal:any, nome:any, data_nascimento:any, sexo:any, raca:any, especie:any, tipo_exploracao:any, local_de_nascimento:any, categoria:any, anomalia:any, quilos_do_nascimento:any, numero_brinco:any){
-    this.router.navigate(['add-animais/' + idanimal + '/' + nome + '/' + data_nascimento + '/' + sexo + '/' + raca + '/' + especie + '/' + tipo_exploracao + '/' + local_de_nascimento + '/' + categoria + '/' + anomalia + '/' + quilos_do_nascimento + '/' + numero_brinco + '/'])
+  editar(idanimal:any, nome:any, data_nascimento:any, sexo:any, raca:any, especie:any, tipo_exploracao:any, local_de_nascimento:any, categoria:any, anomalia:any, quilos_do_nascimento:any, fk_idanimal_pai:any, fk_idanimal_mae:any, fk_funcionario_resp_parto:any, numero_brinco:any){
+    this.router.navigate(['add-animais/' + idanimal + '/' + nome + '/' + data_nascimento + '/' + sexo + '/' + raca + '/' + especie + '/' + tipo_exploracao + '/' + local_de_nascimento + '/' + categoria + '/' + anomalia + '/' + quilos_do_nascimento + '/' + fk_idanimal_pai + '/' + fk_idanimal_mae + '/' + fk_funcionario_resp_parto + '/' + numero_brinco + '/'])
 
   }
   
@@ -105,8 +105,8 @@ export class AnimaisPage implements OnInit {
   
   }
 
-  mostrar(idanimal:any, nome:any, data_nascimento:any, sexo:any, raca:any, especie:any, tipo_exploracao:any, local_de_nascimento:any, categoria:any, anomalia:any, quilos_do_nascimento:any, numero_brinco:any){
-    this.router.navigate(['mostrar-animais/' + idanimal + '/' + nome + '/' + data_nascimento + '/' + sexo + '/' + raca + '/' + especie + '/' + tipo_exploracao + '/' + local_de_nascimento + '/' + categoria + '/' + anomalia + '/' + quilos_do_nascimento + '/' + numero_brinco + '/'])
+  mostrar(idanimal:any, nome:any, data_nascimento:any, sexo:any, raca:any, especie:any, tipo_exploracao:any, local_de_nascimento:any, categoria:any, anomalia:any, quilos_do_nascimento:any, fk_idanimal_pai:any, fk_idanimal_mae:any, fk_funcionario_resp_parto:any, numero_brinco:any){
+    this.router.navigate(['mostrar-animais/'  + idanimal + '/' + nome + '/' + data_nascimento + '/' + sexo + '/' + raca + '/' + especie + '/' + tipo_exploracao + '/' + local_de_nascimento + '/' + categoria + '/' + anomalia + '/' + quilos_do_nascimento + '/' + fk_idanimal_pai + '/' + fk_idanimal_mae + '/' + fk_funcionario_resp_parto + '/' + numero_brinco + '/'])
   
   }
   

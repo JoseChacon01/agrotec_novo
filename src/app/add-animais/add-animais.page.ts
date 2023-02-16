@@ -23,6 +23,9 @@ export class AddAnimaisPage implements OnInit {
   quilos_do_nascimento: string = "";
   numero_brinco: string = "";
   idanimal: string = "";
+  fk_idanimal_pai: string = "";
+  fk_idanimal_mae: string = "";
+  fk_funcionario_resp_parto: string = "";
 
   antigo: string = "";
   antigo2: string = "";
@@ -51,6 +54,9 @@ export class AddAnimaisPage implements OnInit {
       this.categoria = data.categoria;
       this.anomalia = data.anomalia;
       this.quilos_do_nascimento = data.quilos_do_nascimento;
+      this.fk_idanimal_pai = data.fk_idanimal_pai;
+      this.fk_idanimal_mae = data.fk_idanimal_mae;
+      this.fk_funcionario_resp_parto = data.fk_funcionario_resp_parto;
       this.numero_brinco = data.numero_brinco;
 
       this.antigo = data.nome;
@@ -77,6 +83,10 @@ export class AddAnimaisPage implements OnInit {
     this.router.navigate(['animais']);
   }
 
+  PesquisarAnimais(){
+    this.router.navigate(['pesquisar-animais']);
+  }
+
   cadastrar(){
     return new Promise(resolve => {
       let dados = {
@@ -90,6 +100,9 @@ export class AddAnimaisPage implements OnInit {
         categoria: this.categoria,
         anomalia: this.anomalia,
         quilos_do_nascimento: this.quilos_do_nascimento,
+        fk_idanimal_pai: this.fk_idanimal_pai,
+        fk_idanimal_mae: this.fk_idanimal_mae,
+        fk_funcionario_resp_parto: this.fk_funcionario_resp_parto,
         numero_brinco: this.numero_brinco,
         idanimal: this.idanimal,
         antigo: this.antigo,
@@ -125,6 +138,9 @@ export class AddAnimaisPage implements OnInit {
     this.categoria = "";
     this.anomalia = "";
     this.quilos_do_nascimento = "";
+    this.fk_idanimal_pai = "";
+    this.fk_idanimal_mae = "";
+    this.fk_funcionario_resp_parto = "";
     this.numero_brinco = "";
 
   }
